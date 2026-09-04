@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Controle de Filmes</title>
   
-  <!-- Bootstrap via node_modules e CSS próprio -->
+
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./src/css/style.css">
 
-  <!-- Tailwind CSS via CDN -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-  <!-- ==================================================================
-       PARTE 1 — TAILWIND CSS (PRIMEIRO)
-       ================================================================== -->
   <section id="parte-tailwind">
     <nav class="bg-purple-900 text-white px-6 py-4 flex flex-col sm:flex-row justify-between items-center shadow-md">
       <span class="text-xl font-bold tracking-wide mb-3 sm:mb-0">🎬 CineFilmes (Tailwind)</span>
@@ -27,7 +24,7 @@
       </ul>
     </nav>
 
-    <!-- GRID DE FILMES EM CARTAZ (TAILWIND) -->
+
     <div class="max-w-6xl mx-auto px-4 py-12">
       <h2 class="text-3xl font-bold text-center text-purple-950 mb-8">Filmes em Cartaz</h2>
       <div id="grid-tailwind" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -101,7 +98,6 @@
       </div>
     </div>
 
-    <!-- FORMULÁRIO DE RESERVA (TAILWIND) -->
     <div class="max-w-md mx-auto px-4 py-8">
       <h2 class="text-2xl font-bold text-center text-purple-950 mb-6">Garanta seu Ingresso</h2>
       <form class="bg-white p-6 rounded-xl shadow-md border border-purple-100 space-y-4">
@@ -116,7 +112,7 @@
         <div>
           <label class="block text-sm font-semibold text-gray-700 mb-1">Filme de interesse</label>
           <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all bg-white">
-            <!-- Preenchido via JS -->
+
           </select>
         </div>
         <button type="button" class="w-full bg-purple-900 hover:bg-purple-950 text-white font-semibold py-3 rounded-lg shadow transition-colors mt-2">Confirmar Reserva</button>
@@ -128,9 +124,6 @@
     </footer>
   </section>
 
-  <!-- ==================================================================
-       PARTE 2 — BOOTSTRAP (ÚLTIMO)
-       ================================================================== -->
   <div class="mt-16 pt-10 border-t-4 border-red-600">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -151,7 +144,7 @@
     </header>
 
     <main>
-      <!-- HERO / BANNER PRINCIPAL -->
+
       <section class="bg-dark text-white text-center py-5">
         <div class="container py-4">
           <h1 class="display-4 fw-bold">Ingressos Disponíveis 🎟️</h1>
@@ -159,8 +152,7 @@
           <a href="#filmes" class="btn btn-danger btn-lg custom-hero-btn">Ver Filmes em Cartaz</a>
         </div>
       </section>
-
-      <!-- 1º: FILMES EM CARTAZ (BOOTSTRAP) -->
+  
       <section id="filmes" class="container py-5">
         <h2 class="text-center fw-bold mb-4">🍿 Filmes em Cartaz</h2>
         <div class="row g-4">
