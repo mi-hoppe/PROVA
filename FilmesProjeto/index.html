@@ -1,11 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Filmes</title>
+  
+ 
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> <!-- bootstrap importando na via node_modules -->
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script> <!--  tailwind no css -->
 </head>
 <body>
-    
+
+  <!--PARTE 1 — BOOTSTRAP -->
+  <!-- NAVBAR BOOTSTRAP -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Filmes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#Ingressos">Ingressos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Pipocas">#Pipocas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Comprovante">#Comprovante</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-dark text-white text-center py-5">
+      <div class="container py-4">
+        <h1 class="display-4 fw-bold">Ingressos Disponível</h1>
+        <p class="lead mb-4">Ingressos para estudantes a partir de R$ 10,OO</p>
+        <a href="#matricula" class="btn btn-primary btn-lg custom-hero-btn">Ingressos Disponível</a>
+      </div>
+    </section>
+    <section id="cursos" class="container py-5">
+      <h2 class="text-center fw-bold mb-4">Nossos ingressos </h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 card-item border">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">🎸 Violão</h5>
+              <p class="card-text text-muted flex-grow-1">Do básico ao avançado, aprenda acordes, escalas e músicas completas.</p>
+              <div class="mt-auto pt-3">
+                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 card-item border">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">🥁 Bateria</h5>
+              <p class="card-text text-muted flex-grow-1">Ritmo e técnica para todos os estilos: rock, samba, jazz e mais.</p>
+              <div class="mt-auto pt-3">
+                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 card-item border">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">🎹 Teclado</h5>
+              <p class="card-text text-muted flex-grow-1">Teoria musical aplicada ao teclado com repertório variado.</p>
+              <div class="mt-auto pt-3">
+                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 card-item border">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">🎤 Canto</h5>
+              <p class="card-text text-muted flex-grow-1">Técnica vocal, dicção e expressão para qualquer estilo musical.</p>
+              <div class="mt-auto pt-3">
+                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 card-item border">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">🎻 Violino</h5>
+              <p class="card-text text-muted flex-grow-1">Método clássico com professores especializados em cordas.</p>
+              <div class="mt-auto pt-3">
+                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 card-item border">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">🎺 Trompete</h5>
+              <p class="card-text text-muted flex-grow-1">Sopros com foco em jazz, MPB e música clássica.</p>
+              <div class="mt-auto pt-3">
+                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSORES BOOTSTRAP -->
+    <section id="professores" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Nossos Professores</h2>
+        <div class="row text-center g-4">
+          <div class="col-12 col-md-4">
+            <div class="p-3">
+              <p class="display-4 mb-2">🎸</p>
+              <h6 class="fw-bold fs-5 mb-1">Lucas Moreira</h6>
+              <p class="text-muted small">Violão e Guitarra · 12 anos de experiência</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="p-3">
+              <p class="display-4 mb-2">🥁</p>
+              <h6 class="fw-bold fs-5 mb-1">Fernanda Alves</h6>
+              <p class="text-muted small">Bateria e Percussão · 8 anos de experiência</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="p-3">
+              <p class="display-4 mb-2">🎹</p>
+              <h6 class="fw-bold fs-5 mb-1">Rafael Costa</h6>
+              <p class="text-muted small">Teclado e Piano · 15 anos de experiência</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE MATRÍCULA -->
+    <section id="matricula" class="container py-5">
+      <h2 class="text-center fw-bold mb-4">Faça sua Matrícula</h2>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <form class="p-4 border rounded bg-white shadow-sm">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Seu nome completo</label>
+              <input type="text" class="form-control" placeholder="Ex: João Silva">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">E-mail</label>
+              <input type="email" class="form-control" placeholder="voce@email.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Curso de interesse</label>
+              <select class="form-select">
+                <option>Violão</option>
+                <option>Bateria</option>
+                <option>Teclado</option>
+                <option>Canto</option>
+                <option>Violino</option>
+                <option>Trompete</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-dark w-100 mt-2">Confirmar Matrícula</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ BOOTSTRAP -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2026 Harmonia Escola de Música · Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!--
+    ==================================================================
+    PARTE 2 — TAILWIND CSS (50 pts)
+    ==================================================================
+  -->
+  <section id="parte-tailwind" class="mt-16 pt-10 border-t-4 border-sky-500">
+    <nav class="bg-purple-900 text-white px-6 py-4 flex flex-col sm:flex-row justify-between items-center shadow-md">
+      <span class="text-xl font-bold tracking-wide mb-3 sm:mb-0">🎵 Harmonia</span>
+      <ul class="flex space-x-6">
+        <li><a href="#" class="hover:text-purple-300 transition-colors">Cursos</a></li>
+        <li><a href="#" class="hover:text-purple-300 transition-colors">Professores</a></li>
+        <li><a href="#" class="hover:text-purple-300 transition-colors">Matrícula</a></li>
+      </ul>
+    </nav>
+
+    <section class="bg-purple-950 text-white text-center py-16 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl font-extrabold mb-4">Desperte o músico que existe em você</h1>
+        <p class="text-purple-200 text-lg mb-8">Aulas para todas as idades, do iniciante ao avançado.</p>
+        <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-colors">Quero me matricular</button>
+      </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold text-center text-purple-950 mb-8">Nossos Cursos</h2>
+      <div id="grid-tailwind" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
+          <div>
+            <h5 class="text-xl font-bold text-purple-900 mb-2">🎸 Violão</h5>
+            <p class="text-gray-600 mb-6">Do básico ao avançado, acordes, escalas e músicas completas.</p>
+          </div>
+          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
+          <div>
+            <h5 class="text-xl font-bold text-purple-900 mb-2">🥁 Bateria</h5>
+            <p class="text-gray-600 mb-6">Ritmo e técnica para rock, samba, jazz e mais.</p>
+          </div>
+          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
+          <div>
+            <h5 class="text-xl font-bold text-purple-900 mb-2">🎹 Teclado</h5>
+            <p class="text-gray-600 mb-6">Teoria musical aplicada com repertório variado.</p>
+          </div>
+          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
+          <div>
+            <h5 class="text-xl font-bold text-purple-900 mb-2">🎤 Canto</h5>
+            <p class="text-gray-600 mb-6">Técnica vocal para qualquer estilo musical.</p>
+          </div>
+          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
+          <div>
+            <h5 class="text-xl font-bold text-purple-900 mb-2">🎻 Violino</h5>
+            <p class="text-gray-600 mb-6">Método clássico com professores especializados.</p>
+          </div>
+          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
+          <div>
+            <h5 class="text-xl font-bold text-purple-900 mb-2">🎺 Trompete</h5>
+            <p class="text-gray-600 mb-6">Sopros com foco em jazz, MPB e clássico.</p>
+          </div>
+          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-md mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold text-center text-purple-950 mb-6">Faça sua Matrícula</h2>
+      <form class="bg-white p-6 rounded-xl shadow-md border border-purple-100 space-y-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Seu nome completo</label>
+          <input type="text" placeholder="Ex: João Silva" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">E-mail</label>
+          <input type="email" placeholder="voce@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Curso de interesse</label>
+          <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all bg-white">
+            <option>Violão</option>
+            <option>Bateria</option>
+            <option>Teclado</option>
+          </select>
+        </div>
+        <button type="button" class="w-full bg-purple-900 hover:bg-purple-950 text-white font-semibold py-3 rounded-lg shadow transition-colors mt-2">Confirmar Matrícula</button>
+      </form>
+    </div>
+
+    <footer class="bg-purple-950 text-purple-300 text-center py-6 mt-8">
+      <p>© 2026 Harmonia Escola de Música · Feito com Tailwind CSS</p>
+    </footer>
+  </section>
+
+  <!-- JS do Bootstrap via node_modules & Script próprio -->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./src/js/script.js"></script>
 </body>
 </html>
