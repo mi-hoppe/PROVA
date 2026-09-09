@@ -1,312 +1,426 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Controle de Filmes</title>
-  
- 
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> <!-- bootstrap importando na via node_modules -->
-  <link rel="stylesheet" href="./src/css/style.css">
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>CineFilmes - Filmes e Ingressos</title> <!-- Bootstrap --> <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> <!-- CSS próprio --> <link rel="stylesheet" href="./src/css/style.css"> <!-- Tailwind --> <script src="https://cdn.tailwindcss.com"></script> </head> <body class="bg-gray-50"> <!-- ========================= NAVBAR ========================== --> <header id="filmes">
+<nav class="bg-purple-950 text-white px-6 py-4 shadow-lg">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
 
-  <script src="https://cdn.tailwindcss.com"></script> <!--  tailwind no css -->
-</head>
-<body>
-
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Filmes</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <a href="#filmes"
+       class="text-2xl font-bold tracking-wide text-white no-underline mb-3 sm:mb-0">
+      🎬 Filmes
+    </a>
+    <ul class="flex flex-wrap justify-center gap-6 m-0 p-0 list-none">
+      <li>
+        <a href="#filmes"
+           class="text-white no-underline hover:text-purple-300 transition-colors">
+          Em Cartaz
+        </a>
+      </li>
+      <li>
+        <a href="#pipocas"
+           class="text-white no-underline hover:text-purple-300 transition-colors">
+          Pipocas & Combos
+        </a>
+      </li>
+      <li>
+        <a href="#reserva"
+           class="text-white no-underline hover:text-purple-300 transition-colors">
+          Reserva de Ingressos
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header> 
+<main>
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-center text-purple-950 mb-8">
+    Filmes em Cartaz
+  </h2>
+  <div id="grid-tailwind"
+       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between
+                transform hover:-translate-y-1 transition-transform
+                border border-purple-100">
+      <img src="./src/img/invocacao do mal.jpg"
+           class="h-64 w-full object-cover"
+           alt="Invocação do Mal 3">
+      <div class="p-6 flex-grow flex flex-col justify-between">
+        <div>
+          <h5 class="text-xl font-bold text-purple-900 mb-2">
+            Invocação do Mal 3
+          </h5>
+          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+            <strong class="text-gray-900">Faixa Etária:</strong> 14 anos<br>
+            <strong class="text-gray-900">Gênero:</strong> Terror<br>
+            <strong class="text-gray-900">Duração:</strong> 1h 52m<br>
+            <strong class="text-gray-900">Preço:</strong> R$ 30,00 (Meia: R$ 15,00)
+          </p>
+        </div>
+        <button
+          type="button"
+          class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600
+                 hover:text-white font-semibold py-2 px-4 rounded-lg
+                 border border-purple-200 transition-colors mt-auto">
+          Comprar ingresso
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#Ingressos">Ingressos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Comidas">#Comidas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Comprovante">#Comprovante</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="bg-dark text-white text-center py-5">
-      <div class="container py-4">
-        <h1 class="display-4 fw-bold">Ingressos Disponível🎟️</h1>
-        <p class="lead mb-4">Ingressos para estudantes a partir de R$ 10,OO</p>
-        <a href="#Ingressos" class="btn btn-primary btn-lg custom-hero-btn">Filmes Disponível</a>
-      </div>
-    </section>
-    <section id="Filmes" class="container py-5">
-      <h2 class="text-center fw-bold mb-4">Nossos ingressos </h2>
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 card-item border">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Invocação do Mal 3</h5>
-              <p class="card-text text-muted flex-grow-1">Faixa Etária: Não recomendado para menores de 14 anos;</br>Genêro: Terror;</br>Duração: 1h 52 minutos;</br>Preço:</br>Normal: R$30,00</br> Meia: R$ 15,00</p>
-              <div class="mt-auto pt-3">
-                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 card-item border">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Homem-Aranha: Um novo dia  🕷️</h5>
-              <p class="card-text text-muted flex-grow-1">Faxa Etária: 12; </br>Genêro: ação, aventura, ficção científica e super-herói;</br> Duração: 2h e 13 minutos;</br> Preço:</br> Normal: R$30,00</br> Meia: R$15,00 </p>
-              <div class="mt-auto pt-3">
-                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 card-item border">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">A Odisseia🏛️</h5>
-              <p class="card-text text-muted flex-grow-1">Faixa Etária: Não é recomendado para menores de 14 anos;</br> Genêro: Poema épico;</br>Duração: 2h 52 minutos;</br>Preço:</br>Normal: R$ 30,00</br>Meia: R$ 15,00</p>
-              <div class="mt-auto pt-3">
-                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 card-item border">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Patrulha Canina </h5>
-              <p class="card-text text-muted flex-grow-1">Faxa Etária: Livre;</br> Genêro: animação, aventura, comédia e infantil/família;</br> Duração: 1h e 28 minutos;</br>Preço:</br> Normal: R$30,00</br>Meia:  R$ 15,00</p>
-              <div class="mt-auto pt-3">
-                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 card-item border">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Moana</h5>
-              <p class="card-text text-muted flex-grow-1">Faixa Etária: Livre;</br>Genêro: Aventura/Animação;</br>Duração: 1h 57 minutos;</br>Preço:</br>Normal: R$30,00</br>Meia: R$ 15,00 </p>
-              <div class="mt-auto pt-3">
-                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 card-item border">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Ponto sem Retorno</h5>
-              <p class="card-text text-muted flex-grow-1">Faixa Etária: Recomendado para maiores de 16 anos;</br> Genêro: Ficção Científica;</br>Duração: 1h 58 minutos;</br>Preço:</br>Normal: R$ 30,00</br>Meia: R$ 15,00</p>
-              <div class="mt-auto pt-3">
-                <a href="#" class="btn btn-outline-dark w-100">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="Comidas" class="bg-light py-5">
-      <div class="container">
-        <h2 class="text-center fw-bold mb-4">Combos e Aperitivos 🍿🍬</h2>
-        <div class="row text-center g-4">
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <p class="display-4 mb-2">🍿</p>
-              <h6 class="fw-bold fs-5 mb-1">Pipoca</h6>
-              <p class="text-muted small">Grande:R$40,00;</br>Média:R$30,00;</br>Pequena:R$25,00</br><a href="#" class="btn btn-outline-dark w-100">Escolher</a></p>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <p class="display-4 mb-2">🍫🍬</p>
-              <h6 class="fw-bold fs-5 mb-1">Doces</h6>
-              <p class="text-muted small">Chocolate:R$11,00;</br>Balas:R$8,50;</br>Chiclete:R$4,00</br><a href="#" class="btn btn-outline-dark w-100">Escolher</a></p>
-            </div>
-          </div>
-           <div class="col-12 col-md-4">
-            <div class="p-3">
-              <p class="display-4 mb-2">🥤</p>
-              <h6 class="fw-bold fs-5 mb-1">Refrigerantes</h6>
-              <p class="text-muted small">Grande:R$10,00;</br>Médio:R$6,50;</br>Pequena:R$4,00</br><a href="#" class="btn btn-outline-dark w-100">Escolher</a></p>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <p class="display-4 mb-2">🍿🥤🥤🍫</p>
-              <h6 class="fw-bold fs-5 mb-1">Combo Master</h6>
-              <p class="text-muted small">Uma pipoca grande, dois refrigerantes médios e uma barra de chocolate.</br>R$50,00</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <p class="display-4 mb-2">🍿🥤🥤</p>
-              <h6 class="fw-bold fs-5 mb-1">Combo Médio</h6>
-              <p class="text-muted small">Uma pipoca média e dois refrigerantes pequenos.</br>R$30,00</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <p class="display-4 mb-2">🍿🍿🥤</p>
-              <h6 class="fw-bold fs-5 mb-1">Combo pequeno</h6>
-              <p class="text-muted small">Duas pipocas pequenas e um refrigerante médio.</br> R$25,00</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="Ingressos" class="container py-5">
-      <h2 class="text-center fw-bold mb-4">Reserve seu ingresso</h2>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-          <form class="p-4 border rounded bg-white shadow-sm">
-            <div class="mb-3">
-              <label class="form-label fw-bold">Seu nome completo</label>
-              <input type="text" class="form-control" placeholder="Ex: Milena Hoppe">
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-bold">E-mail</label>
-              <input type="email" class="form-control" placeholder="voce@email.com">
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-bold">Escolha o filme</label>
-              <select class="form-select">
-                <option>Invocação do Mal 3</option>
-                <option>Homem-Aranha: Novo Dia</option>
-                <option>A Odisseia</option>
-                <option>Patrulha Canina</option>
-                <option>Moana</option>
-                <option>Ponto sem Retorno</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-bold">Tipo de ingreso</label>
-              <select class="form-select">
-              <option>Inteira - R$30,00</option>
-               <option>Meia-entrada - R$15,00</option>
-               </select>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p class="mb-0">© 2026 Harmonia Escola de Música · Todos os direitos reservados</p>
-    </div>
-  </footer>
-  <section id="parte-tailwind" class="mt-16 pt-10 border-t-4 border-sky-500">
-    <nav class="bg-purple-900 text-white px-6 py-4 flex flex-col sm:flex-row justify-between items-center shadow-md">
-      <span class="text-xl font-bold tracking-wide mb-3 sm:mb-0">🎵 Harmonia</span>
-      <ul class="flex space-x-6">
-        <li><a href="#" class="hover:text-purple-300 transition-colors">Cursos</a></li>
-        <li><a href="#" class="hover:text-purple-300 transition-colors">Professores</a></li>
-        <li><a href="#" class="hover:text-purple-300 transition-colors">Matrícula</a></li>
-      </ul>
-    </nav>
-
-    <section class="bg-purple-950 text-white text-center py-16 px-4">
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-3xl sm:text-5xl font-extrabold mb-4">Desperte o músico que existe em você</h1>
-        <p class="text-purple-200 text-lg mb-8">Aulas para todas as idades, do iniciante ao avançado.</p>
-        <button class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-colors">Quero me matricular</button>
-      </div>
-    </section>
-
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold text-center text-purple-950 mb-8">Nossos Cursos</h2>
-      <div id="grid-tailwind" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
-          <div>
-            <h5 class="text-xl font-bold text-purple-900 mb-2">🎸 Violão</h5>
-            <p class="text-gray-600 mb-6">Do básico ao avançado, acordes, escalas e músicas completas.</p>
-          </div>
-          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
-          <div>
-            <h5 class="text-xl font-bold text-purple-900 mb-2">🥁 Bateria</h5>
-            <p class="text-gray-600 mb-6">Ritmo e técnica para rock, samba, jazz e mais.</p>
-          </div>
-          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
-          <div>
-            <h5 class="text-xl font-bold text-purple-900 mb-2">🎹 Teclado</h5>
-            <p class="text-gray-600 mb-6">Teoria musical aplicada com repertório variado.</p>
-          </div>
-          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
-          <div>
-            <h5 class="text-xl font-bold text-purple-900 mb-2">🎤 Canto</h5>
-            <p class="text-gray-600 mb-6">Técnica vocal para qualquer estilo musical.</p>
-          </div>
-          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
-          <div>
-            <h5 class="text-xl font-bold text-purple-900 mb-2">🎻 Violino</h5>
-            <p class="text-gray-600 mb-6">Método clássico com professores especializados.</p>
-          </div>
-          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between transform hover:-translate-y-1 transition-transform border border-purple-100">
-          <div>
-            <h5 class="text-xl font-bold text-purple-900 mb-2">🎺 Trompete</h5>
-            <p class="text-gray-600 mb-6">Sopros com foco em jazz, MPB e clássico.</p>
-          </div>
-          <button class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white font-semibold py-2 px-4 rounded-lg border border-purple-200 transition-colors mt-auto">Saiba mais</button>
-        </div>
       </div>
     </div>
-
-    <div class="max-w-md mx-auto px-4 py-8">
-      <h2 class="text-2xl font-bold text-center text-purple-950 mb-6">Faça sua Matrícula</h2>
-      <form class="bg-white p-6 rounded-xl shadow-md border border-purple-100 space-y-4">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between
+                transform hover:-translate-y-1 transition-transform
+                border border-purple-100">
+      <img src="./src/img/homem aranha.jpg"
+           class="h-64 w-full object-cover"
+           alt="Homem-Aranha: Um novo dia">
+      <div class="p-6 flex-grow flex flex-col justify-between">
         <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Seu nome completo</label>
-          <input type="text" placeholder="Ex: João Silva" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all">
+          <h5 class="text-xl font-bold text-purple-900 mb-2">
+            Homem-Aranha: Um novo dia 🕷️
+          </h5>
+          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+            <strong class="text-gray-900">Faixa Etária:</strong> 12 anos<br>
+            <strong class="text-gray-900">Gênero:</strong> Ação / Aventura<br>
+            <strong class="text-gray-900">Duração:</strong> 2h 13m<br>
+            <strong class="text-gray-900">Preço:</strong> R$ 30,00 (Meia: R$ 15,00)
+          </p>
         </div>
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">E-mail</label>
-          <input type="email" placeholder="voce@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all">
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Curso de interesse</label>
-          <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all bg-white">
-            <option>Violão</option>
-            <option>Bateria</option>
-            <option>Teclado</option>
-          </select>
-        </div>
-        <button type="button" class="w-full bg-purple-900 hover:bg-purple-950 text-white font-semibold py-3 rounded-lg shadow transition-colors mt-2">Confirmar Matrícula</button>
-      </form>
+        <button
+          type="button"
+          class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600
+                 hover:text-white font-semibold py-2 px-4 rounded-lg
+                 border border-purple-200 transition-colors mt-auto">
+          Comprar ingresso
+        </button>
+      </div>
     </div>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between
+                transform hover:-translate-y-1 transition-transform
+                border border-purple-100">
+      <img src="./src/img/odisseia.jpg"
+           class="h-64 w-full object-cover"
+           alt="A Odisseia">
+      <div class="p-6 flex-grow flex flex-col justify-between">
+        <div>
+          <h5 class="text-xl font-bold text-purple-900 mb-2">
+            A Odisseia 🏛️
+          </h5>
+          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+            <strong class="text-gray-900">Faixa Etária:</strong> 14 anos<br>
+            <strong class="text-gray-900">Gênero:</strong> Épico / Aventura<br>
+            <strong class="text-gray-900">Duração:</strong> 2h 52m<br>
+            <strong class="text-gray-900">Preço:</strong> R$ 30,00 (Meia: R$ 15,00)
+          </p>
+        </div>
+        <button
+          type="button"
+          class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600
+                 hover:text-white font-semibold py-2 px-4 rounded-lg
+                 border border-purple-200 transition-colors mt-auto">
+          Comprar ingresso
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between
+                transform hover:-translate-y-1 transition-transform
+                border border-purple-100">
+      <img src="./src/img/patrulha canina.jpg"
+           class="h-64 w-full object-cover"
+           alt="Patrulha Canina: Rota Final">
+      <div class="p-6 flex-grow flex flex-col justify-between">
+        <div>
+          <h5 class="text-xl font-bold text-purple-900 mb-2">
+            Patrulha Canina: Rota Final
+          </h5>
+          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+            <strong class="text-gray-900">Faixa Etária:</strong> Livre<br>
+            <strong class="text-gray-900">Gênero:</strong> Animação / Infantil<br>
+            <strong class="text-gray-900">Duração:</strong> 1h 28m<br>
+            <strong class="text-gray-900">Preço:</strong> R$ 30,00 (Meia: R$ 15,00)
+          </p>
+        </div>
+        <button
+          type="button"
+          class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600
+                 hover:text-white font-semibold py-2 px-4 rounded-lg
+                 border border-purple-200 transition-colors mt-auto">
+          Comprar ingresso
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between
+                transform hover:-translate-y-1 transition-transform
+                border border-purple-100">
+      <img src="./src/img/moana.jpg"
+           class="h-64 w-full object-cover"
+           alt="Moana">
+      <div class="p-6 flex-grow flex flex-col justify-between">
+        <div>
+          <h5 class="text-xl font-bold text-purple-900 mb-2">
+            Moana
+          </h5>
+          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+            <strong class="text-gray-900">Faixa Etária:</strong> Livre<br>
+            <strong class="text-gray-900">Gênero:</strong> Animação / Aventura<br>
+            <strong class="text-gray-900">Duração:</strong> 1h 57m<br>
+            <strong class="text-gray-900">Preço:</strong> R$ 30,00 (Meia: R$ 15,00)
+          </p>
+        </div>
+        <button
+          type="button"
+          class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600
+                 hover:text-white font-semibold py-2 px-4 rounded-lg
+                 border border-purple-200 transition-colors mt-auto">
+          Comprar ingresso
+        </button>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between
+                transform hover:-translate-y-1 transition-transform
+                border border-purple-100">
+      <img src="./src/img/ponto sem retorno.jpg"
+           class="h-64 w-full object-cover"
+           alt="Ponto sem Retorno">
+      <div class="p-6 flex-grow flex flex-col justify-between">
+        <div>
+          <h5 class="text-xl font-bold text-purple-900 mb-2">
+            Ponto sem Retorno
+          </h5>
+          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+            <strong class="text-gray-900">Faixa Etária:</strong> 16 anos<br>
+            <strong class="text-gray-900">Gênero:</strong> Ficção Científica<br>
+            <strong class="text-gray-900">Duração:</strong> 1h 58m<br>
+            <strong class="text-gray-900">Preço:</strong> R$ 30,00 (Meia: R$ 15,00)
+          </p>
+        </div>
+        <button
+          type="button"
+          class="w-full bg-purple-50 text-purple-700 hover:bg-purple-600
+                 hover:text-white font-semibold py-2 px-4 rounded-lg
+                 border border-purple-200 transition-colors mt-auto">
+          Comprar ingresso
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pipocas"
+         class="mt-8 pt-10 pb-12 border-t-4 border-purple-600 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-center text-3xl font-bold text-purple-950 mb-4">
+      Combos e Aperitivos 🍿🍬
+    </h2>
+    <p class="text-center text-gray-600 mb-8">
+      Aproveite nossos melhores acompanhamentos para deixar sua sessão ainda mais especial!
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow-md text-center
+                  border border-purple-100
+                  hover:-translate-y-1 transition-transform">
+        <div class="text-6xl mb-4">
+          🍿
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2">
+          Pipoca Salgada ou Doce
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Grande: <strong>R$ 40,00</strong><br>
+          Média: <strong>R$ 30,00</strong><br>
+          Pequena: <strong>R$ 25,00</strong>
+        </p>
+      </div>
+       <div class="bg-white p-6 rounded-xl shadow-md text-center
+                  border border-purple-100
+                  hover:-translate-y-1 transition-transform">
 
-    <footer class="bg-purple-950 text-purple-300 text-center py-6 mt-8">
-      <p>© 2026 CineFilmes</p>
-    </footer>
-  </section>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./src/js/script.js"></script>
-</body>
-</html>
+        <div class="text-6xl mb-4">
+          🍭
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2">
+          Doces
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Chocolate: <strong>R$ 10,00</strong><br>
+          Balas: <strong>R$ 5,00</strong><br>
+          Chiclete: <strong>R$ 4,50</strong>
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center
+                  border border-purple-100
+                  hover:-translate-y-1 transition-transform">
+
+        <div class="text-6xl mb-4">
+          🥤
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2">
+          Refrigerante
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Grande: <strong>R$ 10,00</strong><br>
+          Médio: <strong>R$ 8,00</strong><br>
+          Pequeno: <strong>R$ 6,50</strong>
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center
+                  border border-purple-100
+                  hover:-translate-y-1 transition-transform">
+
+        <div class="text-5xl mb-4">
+          🍿🥤🥤🍫
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2">
+          Combo Master
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          1 Pipoca Grande<br>
+          + 2 Refris Médios<br>
+          + 1 Chocolate
+        </p>
+        <p class="text-2xl font-bold text-purple-700 mt-3">
+          R$ 50,00
+        </p>
+      </div>
+       <div class="bg-white p-6 rounded-xl shadow-md text-center
+                  border border-purple-100
+                  hover:-translate-y-1 transition-transform">
+
+        <div class="text-5xl mb-4">
+          🍿🥤🥤
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2">
+          Combo Médio
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          1 Pipoca Média<br>
+          + 2 Refris Pequenos<br>
+        </p>
+        <p class="text-2xl font-bold text-purple-700 mt-3">
+          R$ 40,00
+        </p>
+      </div>
+       <div class="bg-white p-6 rounded-xl shadow-md text-center
+                  border border-purple-100
+                  hover:-translate-y-1 transition-transform">
+
+        <div class="text-5xl mb-4">
+          🍿🍿🥤
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2">
+          Combo Minimo
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          2 Pipocas Pequenas<br>
+          + 1 Refri Médio<br>
+        </p>
+        <p class="text-2xl font-bold text-purple-700 mt-3">
+          R$ 30,00
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="reserva" class="max-w-md mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-center text-purple-950 mb-3">
+    Garanta seu Ingresso 🎟️
+  </h2>
+
+  <p class="text-center text-gray-600 mb-6">
+    Preencha seus dados para realizar sua reserva.
+  </p>
+
+  <form
+    class="bg-white p-6 rounded-xl shadow-md border border-purple-100 space-y-4">
+    <div>
+      <label
+        for="nome"
+        class="block text-sm font-semibold text-gray-700 mb-1">
+        Seu nome completo
+      </label>
+
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        placeholder="Ex: João Silva"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg
+               focus:outline-none focus:ring-2 focus:ring-purple-600
+               focus:border-transparent transition-all"
+      >
+    </div>
+    <div>
+      <label
+        for="email"
+        class="block text-sm font-semibold text-gray-700 mb-1"
+>
+        E-mail
+      </label>
+
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="voce@email.com"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg
+               focus:outline-none focus:ring-2 focus:ring-purple-600
+               focus:border-transparent transition-all"
+      >
+    </div>
+    <div>
+      <label
+        for="filme"
+        class="block text-sm font-semibold text-gray-700 mb-1"
+      >
+        Filme
+      </label>
+
+      <select
+        id="filme"
+        name="filme"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg
+               focus:outline-none focus:ring-2 focus:ring-purple-600
+               focus:border-transparent transition-all bg-white"
+      >
+        <option value="">Selecione um filme</option>
+        <option value="invocacao-do-mal-3">Invocação do Mal 3</option>
+        <option value="homem-aranha">Homem-Aranha: Um novo dia</option>
+        <option value="a-odisseia">A Odisseia</option>
+        <option value="patrulha-canina">Patrulha Canina: Rota Final</option>
+        <option value="moana">Moana</option>
+        <option value="ponto-sem-retorno">Ponto sem Retorno</option>
+      </select>
+    </div>
+    <div>
+      <label
+        for="ingresso"
+        class="block text-sm font-semibold text-gray-700 mb-1"
+      >
+        Ingresso
+      </label>
+      <select
+        id="ingresso"
+        name="ingresso"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg
+               focus:outline-none focus:ring-2 focus:ring-purple-600
+               focus:border-transparent transition-all bg-white">
+        <option value="">Qual ingresso deseja?</option>
+        <option value="inteira">Inteira: R$ 30,00</option>
+        <option value="meia">Meia: R$ 15,00</option>
+      </select>
+    </div>
+    <button
+      type="submit"
+      class="w-full bg-purple-900 hover:bg-purple-950
+             text-white font-semibold py-3 rounded-lg
+             shadow transition-colors mt-2">
+      Confirmar Reserva 🎟️
+</button>
+  </form>
+</section>
+</main> 
+<footer class="bg-purple-950 text-purple-300 text-center py-6">
+<p class="mb-0">
+  © 2026 CineFilmes 
+</p>
+</footer>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="./src/js/script.js"></script> </body> </html>
