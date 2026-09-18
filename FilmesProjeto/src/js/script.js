@@ -54,36 +54,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  const filmeSelect = document.querySelector('#filme');
-  if (filmeSelect) {
-    filmeSelect.innerHTML =
-      '<option value="">Selecione um filme</option>';
-    filmes.forEach((filme) => {
-      const option = document.createElement('option');
-      option.value = filme.titulo;
-      option.textContent = filme.titulo;
-      filmeSelect.appendChild(option);
-    });
+ const filmeSelect = document.querySelector('#filme'); // busca pag do campo que possui o ID filmes.
+
+if (filmeSelect) { // map trasnforma cada objeto de filmes do seu arry em uma frase no formato de tag html .
+  const opcoesFilmes = filmes
+    .map((filme) => `<option value="${filme.titulo} ">${filme.titulo}</option>`)
+    .join('');
+
+  filmeSelect.innerHTML = `<option value="">Selecione um filme</option>${opcoesFilmes}`;
+
   }
-  const botoesComprar =
-    document.querySelectorAll('.comprar-ingresso');
-  botoesComprar.forEach((botao) => {
-    botao.addEventListener('click', () => {
-      const filmeSelecionado =
-        botao.getAttribute('data-filme');
-      if (filmeSelect) {
-        filmeSelect.value = filmeSelecionado;
-      }
-      const reserva =
-        document.querySelector('#reserva');
-      if (reserva) {
-        reserva.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
+ const botoesComprar = document.querySelectorAll('.comprar-ingresso');
+
+botoesComprar.forEach((botao) => {
+  botao.addEventListener('click', () => {
+    const filmeSelecionado = botao.getAttribute('data-filme');
+    
+    if (filmeSelect) {
+      filmeSelect.value = filmeSelecionado;
+      // Foca no campo de seleção e rola a tela até ele automaticamente
+      filmeSelect.focus({ preventScroll: false });
+    }
   });
+});
   const form =
     document.querySelector('#form-reserva');
   if (form) {
@@ -118,7 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
         `🎟️ Ingresso: ${ingresso}\n\n` +
         `Enviamos a confirmação para ${email}.`
       );
-      form.reset();
+      // Limpa o select voltando para a opção padrão
+
+      if (filmeSelect) {
+        filmeSelect.value = ''; 
+      }
+// Limpa os campos de texto do formulário
+document.querySelector('#nome').value = '';
+document.querySelector('#email').value = '';
     });
   }
 });
