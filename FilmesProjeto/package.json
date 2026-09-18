@@ -1,0 +1,20 @@
+{
+  "name": "filmesprojeto",
+  "version": "1.0.0",
+  "description": "Avaliação prática MS2 - Controle de filmes com Bootstrap (NPM) e Tailwind CSS",
+  "main": "src/js/script.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": [],
+  "author": "ANA JULIA RIBEIRO FERREIRA",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "autoprefixer": "^10.6.1",
+    "bootstrap": "^5.3.8",
+    "postcss": "^8.5.28",
+    "serve": "^14.2.6",
+    "tailwindcss": "^4.3.3"
+  }
+}
